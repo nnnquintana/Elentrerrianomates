@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="/app-react/public/css/register.css">
+</head>
+<body>
+    <h1>Registro de Usuario</h1>
+
+    <form id="registrationForm">
+        <label for="username">Nombre de Usuario:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <label for="confirmPassword">Confirmar Contraseña:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <br>
+        <button type="submit">Registrarse</button>
+    </form>
+
+    <p id="message" style="color: green;"></p>
+
+    <script>
+
+        document.getElementById('registrationForm').addEventListener('submit', function (event) {
+            event.preventDefault(); 
+
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password === confirmPassword) {
+            } else {
+                document.getElementById('message').textContent = 'Las contraseñas no coinciden';
+            }
+        });
+    </script>
+</body>
+</html>

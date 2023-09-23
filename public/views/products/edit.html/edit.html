@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Producto</title>
+    <link rel="stylesheet" href="/app-react/public/css/edit.css">
+</head>
+<body>
+    <h1>Editar Producto</h1>
+
+   
+    <form id="editProductForm" action="/products/edit" method="POST">
+        <input type="hidden" name="productId" value="ID_DEL_PRODUCTO">
+
+        <label for="productName">Nombre del Producto:</label>
+        <input type="text" id="productName" name="productName" value="Nombre del Producto" required>
+
+        <label for="productPrice">Precio:</label>
+        <input type="number" id="productPrice" name="productPrice" value="Precio" required>
+
+        <label for="productDescription">Descripción:</label>
+        <textarea id="productDescription" name="productDescription" rows="4" required>Descripción del Producto</textarea>
+
+        <label for="productImage">Imagen del Producto:</label>
+        <input type="file" id="productImage" name="productImage">
+
+        <button type="submit">Guardar Cambios</button>
+    </form>
+
+    <a href="/app-react/public/views/products/detail.html/detail.html">Cancelar</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
