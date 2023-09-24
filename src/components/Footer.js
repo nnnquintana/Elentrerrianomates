@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line 
 import PropTypes from 'prop-types';
 import './Footer.css';
 
@@ -21,10 +22,7 @@ function Footer(props) {
     );
 }
 
-Footer.propTypes = {
-    companyName: PropTypes.string.isRequired, 
-    tagline: PropTypes.string.isRequired,
-};
+<Footer companyName="El Entrerriano Mates" tagline="Tu Rincon del Mate" />
 
 export default Footer;
 
